@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FraudGuard AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background effects -->
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+    <div class="page">
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+
+            <div class="logo">
+                <div class="logo-symbol">⚡</div>
+
+                <div class="logo-text">
+                    Fraud<span>Guard</span>
+                </div>
+            </div>
+
+            <div class="nav-links">
+                <a href="#analyze">Analyze</a>
+                <a href="#about">About</a>
+            </div>
+
+            <div class="model-status">
+                <span class="status-dot"></span>
+                AI Model Online
+            </div>
+
+        </nav>
+
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    <span>✦</span>
+                    AI-POWERED FRAUD DETECTION
+                </div>
+
+                <h1>
+                    Detect fraud with
+                    <span>intelligent AI.</span>
+                </h1>
+
+                <p>
+                    Analyze credit card transactions in real time
+                    using a trained machine learning model.
+                </p>
+
+                <div class="hero-stats">
+
+                    <div class="stat">
+                        <strong>XGBoost</strong>
+                        <span>ML Model</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>Real-time</strong>
+                        <span>Prediction</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>AI</strong>
+                        <span>Risk Analysis</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- AI ORB -->
+            <div class="ai-visual">
+
+                <div class="orb">
+                    <div class="orb-inner"></div>
+                </div>
+
+                <div class="orbit orbit-1"></div>
+                <div class="orbit orbit-2"></div>
+
+                <div class="floating-card card-left">
+                    <span>✓</span>
+                    Transaction
+                    <strong>Analyzed</strong>
+                </div>
+
+                <div class="floating-card card-right">
+                    <span>✦</span>
+                    AI Risk
+                    <strong>Assessment</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ANALYSIS SECTION -->
+        <section id="analyze" class="analysis-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <div class="section-label">
+                        TRANSACTION ANALYSIS
+                    </div>
+
+                    <h2>
+                        Check a transaction
+                    </h2>
+
+                    <p>
+                        Enter transaction details and let the model
+                        assess the fraud risk.
+                    </p>
+                </div>
+
+                <div class="secure-badge">
+                    🔒 Secure Analysis
+                </div>
+
+            </div>
+
+
+            <!-- FORM -->
+            <div class="form-card">
+
+                <form id="fraudForm">
+
+                    <div class="form-grid">
+
+
+                        <!-- AMOUNT -->
+                        <div class="field full">
+
+                            <label for="amount">
+                                Transaction Amount
+                            </label>
+
+                            <div class="input-box">
+
+                                <span>$</span>
+
+                                <input
+                                    type="number"
+                                    id="amount"
+                                    placeholder="Enter amount"
+                                    step="0.01"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- HOUR -->
+                        <div class="field">
+
+                            <label for="transaction_hour">
+                                Transaction Hour
+                            </label>
+
+                            <div class="input-box">
+
+                                <span>◷</span>
+
+                                <input
+                                    type="number"
+                                    id="transaction_hour"
+                                    placeholder="0 - 23"
+                                    min="0"
+                                    max="23"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CATEGORY -->
+                        <div class="field">
+
+                            <label for="merchant_category">
+                                Merchant Category
+                            </label>
+
+                            <div class="input-box">
+
+                                <span>▦</span>
+
+                                <select
+                                    id="merchant_category"
+                                    required
+                                >
+
+                                    <option
+                                        value=""
+                                        disabled
+                                        selected
+                                    >
+                                        Select category
+                                    </option>
+
+                                    <option value="Clothing">
+                                        Clothing
+                                    </option>
+
+                                    <option value="Electronics">
+                                        Electronics
+                                    </option>
+
+                                    <option value="Food">
+                                        Food
+                                    </option>
+
+                                    <option value="Grocery">
+                                        Grocery
+                                    </option>
+
+                                    <option value="Travel">
+                                        Travel
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- FOREIGN -->
+                        <div class="field">
+
+                            <label for="foreign_transaction">
+                                Foreign Transaction
+                            </label>
+
+                            <div class="input-box">
+
+                                <span>◎</span>
+
+                                <select
+                                    id="foreign_transaction"
+                                    required
+                                >
+
+                                    <option
+                                        value=""
+                                        disabled
+                                        selected
+                                    >
+                                        Select
+                                    </option>
+
+                                    <option value="0">
+                                        No
+                                    </option>
+
+                                    <option value="1">
+                                        Yes
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- LOCATION -->
+                        <div class="field">
+
+                            <label for="location_mismatch">
+                                Location Mismatch
+                            </label>
+
+                            <div class="input-box">
+
+                                <span>⌖</span>
+
+                                <select
+                                    id="location_mismatch"
+                                    required
+                                >
+
+                                    <option
+                                        value=""
+                                        disabled
+                                        selected
+                                    >
+                                        Select
+                                    </option>
+
+                                    <option value="0">
+                                        No
+                                    </option>
+
+                                    <option value="1">
+                                        Yes
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- DEVICE -->
+                        <div class="field">
+
+                            <label for="device_trust_score">
+                                Device Trust Score
+                            </label>
+
+                            <div class="input-box">
+
+                                <span>◉</span>
+
+                                <input
+                                    type="number"
+                                    id="device_trust_score"
+                                    placeholder="Enter trust score"
+                                    step="0.01"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- VELOCITY -->
+                        <div class="field">
+
+                            <label for="velocity_last_24h">
+                                Transactions in Last 24 Hours
+                            </label>
+
+                            <div class="input-box">
+
+                                <span>↗</span>
+
+                                <input
+                                    type="number"
+                                    id="velocity_last_24h"
+                                    placeholder="Transaction count"
+                                    min="0"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- AGE -->
+                        <div class="field">
+
+                            <label for="cardholder_age">
+                                Cardholder Age
+                            </label>
+
+                            <div class="input-box">
+
+                                <span>♙</span>
+
+                                <input
+                                    type="number"
+                                    id="cardholder_age"
+                                    placeholder="Enter age"
+                                    min="1"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        id="predictButton"
+                        class="analyze-button"
+                    >
+
+                        <span id="buttonText">
+                            Analyze Transaction
+                        </span>
+
+                        <span id="buttonIcon">
+                            →
+                        </span>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULT MODAL -->
+        <div
+            id="resultModal"
+            class="result-modal hidden"
+        >
+
+            <div
+                class="modal-overlay"
+                id="modalOverlay"
+            ></div>
+
+
+            <div
+                id="result"
+                class="result-popup"
+            >
+
+                <button
+                    id="closeResult"
+                    class="close-button"
+                    type="button"
+                >
+                    ×
+                </button>
+
+                <div
+                    id="resultIcon"
+                    class="result-icon"
+                >
+                    ✓
+                </div>
+
+                <div
+                    id="resultTitle"
+                    class="result-title"
+                >
+                    Transaction Appears Legitimate
+                </div>
+
+                <div
+                    id="resultSubtitle"
+                    class="result-subtitle"
+                >
+                    Our AI model assessed this transaction.
+                </div>
+
+
+                <div class="probability-section">
+
+                    <div class="probability-item">
+
+                        <div class="probability-header">
+
+                            <span>
+                                Fraud Probability
+                            </span>
+
+                            <strong id="fraudProbability">
+                                0.00%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress">
+                            <div
+                                id="fraudBar"
+                                class="progress-bar fraud-bar"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="probability-item">
+
+                        <div class="probability-header">
+
+                            <span>
+                                Legitimate Probability
+                            </span>
+
+                            <strong id="legitimateProbability">
+                                0.00%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress">
+
+                            <div
+                                id="legitimateBar"
+                                class="progress-bar legitimate-bar"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="riskBadge"
+                    class="risk-badge"
+                >
+                    LOW RISK
+                </div>
+
+
+                <button
+                    id="closeResultButton"
+                    class="continue-button"
+                    type="button"
+                >
+                    Continue
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer id="about">
+
+            <div>
+                FraudGuard AI
+            </div>
+
+            <div>
+                XGBoost · FastAPI · Machine Learning
+            </div>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
