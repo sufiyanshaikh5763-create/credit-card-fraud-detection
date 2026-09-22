@@ -27,6 +27,7 @@ data/
 
 # Model files
 *.pkl
+!model/fraud_detection_model.pkl
 
 # Logs
 *.log
