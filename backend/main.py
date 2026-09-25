@@ -14,7 +14,9 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5000",
-                   "http://127.0.0.1:5500"],
+                   "http://127.0.0.1:5500",
+                   "https://credit-card-fraud-detection-frontend-m9ko.onrender.com",
+                   ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]
