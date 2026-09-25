@@ -202,7 +202,7 @@ form.addEventListener(
             ----------------------------------------- */
 
             const response = await fetch(
-                "http://credit-card-fraud-detection-bwbf.onrender.com/predict",
+                "https://credit-card-fraud-detection-bwbf.onrender.com/predict",
                 {
                     method: "POST",
 
