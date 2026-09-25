@@ -7,7 +7,17 @@ This project combines exploratory data analysis, machine learning, model explain
 Users can enter transaction details through the web interface, send them to the FastAPI API, and receive a fraud prediction along with fraud and legitimate transaction probabilities.
 
 ---
+## 🚀 Live Demo
 
+Frontend:
+https://credit-card-fraud-detection-frontend-m9ko.onrender.com
+
+API:
+https://credit-card-fraud-detection-bwbf.onrender.com
+
+API Health:
+https://credit-card-fraud-detection-bwbf.onrender.com/health 
+---
 ## Project Overview
 
 Credit card fraud detection is a highly imbalanced binary classification problem where fraudulent transactions represent only a small portion of all transactions.
