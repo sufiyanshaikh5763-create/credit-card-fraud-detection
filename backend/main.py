@@ -32,7 +32,8 @@ def root():
 def health_check():
     return{
         "status":"healthy",
-        "model_loaded":True
+        "service":"Credit Card Fraud Detection API",
+        "model_loaded":model is not None
     }
 
 @app.post("/predict")
