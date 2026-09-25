@@ -13,13 +13,20 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["http://localhost:5000",
+                   "http://127.0.0.1:5500"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]
 )
 # load the trained model once when the API starts
 model = load_model()
+@app.get("/")
+def root():
+    return {
+        "message":"Credit Card Fraud Detection API",
+        "status":"running"
+    }
 
 @app.get("/health")
 def health_check():
